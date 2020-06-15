@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, FlatList } from "react-native";
 
 export default function ListScreen() {
-  const things = [
+  var things = [
     { thing: "Thing 1" },
     { thing: "Thing 2" },
     { thing: "Thing 3" },
@@ -20,10 +20,20 @@ export default function ListScreen() {
     <View>
       <Text style={styles.headingtext}>List Screen</Text>
       <FlatList
-        keyExtractor={thing => thing.thing}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(thing) => thing.thing}
         data={things}
-        renderItem={({item}) => {
-          return <Text style={styles.ListText} > {item.thing} </Text>;
+        renderItem={({ item }) => {
+          return (
+            <Text
+              onPress={() => alert("Hey " + item.thing)}
+              style={styles.ListText}
+            >
+              {" "}
+              {item.thing}{" "}
+            </Text>
+          );
         }}
       />
     </View>
@@ -36,13 +46,14 @@ const styles = StyleSheet.create({
     textAlign: "center",
     padding: 10,
   },
-  ListText:{
-      fontSize:24,
-      letterSpacing:2,
-      fontFamily:'monospace',
-      textAlign:'center',
-      backgroundColor:'#fff',
-      padding:10,
-      margin:5
-  }
+  ListText: {
+    fontSize: 50,
+    letterSpacing: 2,
+    fontFamily: "monospace",
+    textAlign: "center",
+    color: "white",
+    backgroundColor: "tomato",
+    padding: 25,
+    margin: 10,
+  },
 });
