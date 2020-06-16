@@ -10,6 +10,10 @@ const HomeScreen = ({navigation}) => {
     navigation.navigate("List");
   };
 
+  const goToImageScreen = () => {
+    navigation.navigate("ImageScreen");
+  };
+
   return (
     <View style={styles.view}>
       <TouchableOpacity onPress={goToComponets} style={styles.btn}>
@@ -17,6 +21,9 @@ const HomeScreen = ({navigation}) => {
       </TouchableOpacity>
       <TouchableOpacity onPress={goToList} style={styles.btn2}>
         <Text style={styles.btntext}>List Screen</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={goToImageScreen} style={styles.btn3}>
+        <Text style={styles.btntext}>Image Screen</Text>
       </TouchableOpacity>
     </View>
   );
@@ -40,7 +47,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#2196F3",
+    backgroundColor: "#448aff",
     textAlign: "center",
     margin: 15,
   },
@@ -50,7 +57,17 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#448AFF",
+    backgroundColor: "#2979ff",
+    textAlign: "center",
+    margin: 15,
+  },
+  btn3: {
+    width: "90%",
+    height: "10%",
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#2962ff",
     textAlign: "center",
     margin: 15,
   },
