@@ -5,6 +5,9 @@ const HomeScreen = ({navigation}) => {
   const goToComponets = () => {
     navigation.navigate("Components");
     console.log('Test');
+    console.log('Test2');
+    console.log('Test3');
+    console.log('Test4');
   };
 
   const goToList = () => {
