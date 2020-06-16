@@ -8,7 +8,6 @@ const HomeScreen = ({navigation}) => {
 
   const goToList = () => {
     navigation.navigate("List");
-    Alert.alert("Title","Message");
   };
 
   return (
