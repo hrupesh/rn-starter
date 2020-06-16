@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
 const HomeScreen = ({navigation}) => {
   const goToComponets = () => {
     navigation.navigate("Components");
+    console.log('Test');
   };
 
   const goToList = () => {
