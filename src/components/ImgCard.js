@@ -4,67 +4,67 @@ import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function ImgCard(props) {
-  // console.log(props);
+  console.log(props);
   var star = <AntDesign name="star" size={20} color="#212121" />;
 
   if (props.rating == 5) {
     star = (
       <Text>
-     <AntDesign sty name="star" size={20} color="#FFFFFF" />
+        <AntDesign sty name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
       </Text>
     );
-  } else if(props.rating == 4) {
+  } else if (props.rating == 4) {
     star = (
       <Text>
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="star" size={20} color="#FFFFFF" />
-       <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
       </Text>
     );
-  }else if(props.rating == 3) {
+  } else if (props.rating == 3) {
     star = (
       <Text>
-         <AntDesign name="star" size={20} color="#FFFFFF" />
-         <AntDesign name="star" size={20} color="#FFFFFF" />
-         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
       </Text>
     );
-  }else if(props.rating == 2) {
+  } else if (props.rating == 2) {
     star = (
       <Text>
-         <AntDesign name="star" size={20} color="#FFFFFF" />
-         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
       </Text>
     );
-  }else if(props.rating == 1) {
+  } else if (props.rating == 1) {
     star = (
       <Text>
-         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
         <AntDesign name="staro" size={20} color="#FFFFFF" />
       </Text>
     );
-  }else{
+  } else {
     star = (
-      <Text >
-        <AntDesign  name="staro" size={24} color="#1976D2" />
-        <AntDesign  name="staro" size={24} color="#1976D2" />
-        <AntDesign  name="staro" size={24} color="#1976D2" />
-        <AntDesign  name="staro" size={24} color="#1976D2" />
-        <AntDesign  name="staro" size={24} color="#1976D2" />
+      <Text>
+        <AntDesign name="staro" size={24} color="#1976D2" />
+        <AntDesign name="staro" size={24} color="#1976D2" />
+        <AntDesign name="staro" size={24} color="#1976D2" />
+        <AntDesign name="staro" size={24} color="#1976D2" />
+        <AntDesign name="staro" size={24} color="#1976D2" />
       </Text>
     );
   }
@@ -81,9 +81,7 @@ export default function ImgCard(props) {
         <Text numberOfLines={1} style={styles.cardText}>
           {props.item}
         </Text>
-        <Text style={styles.cardRating}>
-          {star}
-        </Text>
+        <Text style={styles.cardRating}>{star}</Text>
       </View>
     </TouchableOpacity>
   );
