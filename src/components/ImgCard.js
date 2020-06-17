@@ -71,7 +71,7 @@ export default function ImgCard(props) {
 
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.card}>
-      {/* <Feather name="image" size={75} color="white" /> */}
+      <Feather name="image" size={75} color="white" />
       <Image
         fadeDuration={100}
         style={styles.img}
