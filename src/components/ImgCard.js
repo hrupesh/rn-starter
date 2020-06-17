@@ -1,27 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity, Image } from "react-native";
 import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function ImgCard(props) {
   // console.log(props);
-  var rating = props.rating;
   var star = <AntDesign name="star" size={20} color="#212121" />;
 
-  const calculateRating = () => {
-    if (rating === 5) {
-      star += <AntDesign name="star" size={20} color="#212121" />;
-      star += <AntDesign name="star" size={20} color="#212121" />;
-      star += <AntDesign name="star" size={20} color="#212121" />;
-      star += <AntDesign name="star" size={20} color="#212121" />;
-    } else if (rating === 4) {
-      star += <AntDesign name="star" size={20} color="#212121" />;
-      star += <AntDesign name="star" size={20} color="#212121" />;
-      star += <AntDesign name="star" size={20} color="#212121" />;
-    }
-  };
-
-  calculateRating;
+  if (props.rating == 5) {
+    star = (
+      <Text>
+     <AntDesign sty name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+      </Text>
+    );
+  } else if(props.rating == 4) {
+    star = (
+      <Text>
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="star" size={20} color="#FFFFFF" />
+       <AntDesign name="staro" size={20} color="#FFFFFF" />
+      </Text>
+    );
+  }else if(props.rating == 3) {
+    star = (
+      <Text>
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+      </Text>
+    );
+  }else if(props.rating == 2) {
+    star = (
+      <Text>
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+      </Text>
+    );
+  }else if(props.rating == 1) {
+    star = (
+      <Text>
+         <AntDesign name="star" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+        <AntDesign name="staro" size={20} color="#FFFFFF" />
+      </Text>
+    );
+  }else{
+    star = (
+      <Text >
+        <AntDesign  name="staro" size={24} color="#1976D2" />
+        <AntDesign  name="staro" size={24} color="#1976D2" />
+        <AntDesign  name="staro" size={24} color="#1976D2" />
+        <AntDesign  name="staro" size={24} color="#1976D2" />
+        <AntDesign  name="staro" size={24} color="#1976D2" />
+      </Text>
+    );
+  }
 
   return (
     <TouchableOpacity activeOpacity={0.8} style={styles.card}>
@@ -36,7 +82,7 @@ export default function ImgCard(props) {
           {props.item}
         </Text>
         <Text style={styles.cardRating}>
-          {rating} {star}
+          {star}
         </Text>
       </View>
     </TouchableOpacity>
@@ -46,7 +92,7 @@ export default function ImgCard(props) {
 const styles = StyleSheet.create({
   card: {
     width: "95%",
-    height: 150,
+    height: 130,
     backgroundColor: "#2196f3",
     alignSelf: "flex-start",
     borderRadius: 50,
@@ -86,7 +132,7 @@ const styles = StyleSheet.create({
   cardRating: {
     fontSize: 20,
     color: "white",
-    padding: 15,
-    paddingHorizontal: 30,
+    padding: 20,
+    paddingHorizontal: 25,
   },
 });
