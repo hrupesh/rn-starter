@@ -1,23 +1,23 @@
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
-import HomeScreen from "./src/screens/HomeScreen";
-import ComponentsScreen from "./src/screens/ComponentsScreens";
-import ListScreen from "./src/screens/ListScreen";
-import ImageScreen from "./src/screens/ImageScreen";
+// import { createAppContainer } from "react-navigation";
+// import { createStackNavigator } from "react-navigation-stack";
+// import HomeScreen from "./src/screens/HomeScreen";
+// import ComponentsScreen from "./src/screens/ComponentsScreens";
+// import ListScreen from "./src/screens/ListScreen";
+// import ImageScreen from "./src/screens/ImageScreen";
 
-const navigator = createStackNavigator(
-  {
-    Home: HomeScreen,
-    Components: ComponentsScreen,
-    List: ListScreen,
-    ImageScreen: ImageScreen
-  },
-  {
-    initialRouteName: "Home",
-    defaultNavigationOptions: {
-      title: "Welcome",
-    },
-  }
-);
+// const navigator = createStackNavigator(
+//   {
+//     Home: HomeScreen,
+//     Components: ComponentsScreen,
+//     List: ListScreen,
+//     ImageScreen: ImageScreen
+//   },
+//   {
+//     initialRouteName: "Home",
+//     defaultNavigationOptions: {
+//       title: "Welcome",
+//     },
+//   }
+// );
 
-export default createAppContainer(navigator);
+// export default createAppContainer(navigator);
