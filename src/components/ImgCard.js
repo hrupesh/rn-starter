@@ -4,7 +4,7 @@ import { Feather } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
 
 export default function ImgCard(props) {
-  console.log(props);
+  // console.log(props);
   var star = <AntDesign name="star" size={20} color="#212121" />;
 
   if (props.rating == 5) {
