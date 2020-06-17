@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View, ImageBackground } from "react-native";
-// import ImgCard from "../components/ImgCard";
+import ImgCard from "../components/ImgCard";
 
 export default function ImageScreen() {
 
