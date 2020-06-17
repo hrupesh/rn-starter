@@ -1,10 +1,10 @@
 {
   "webpackServerPort": null,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9048,
-  "expoServerNgrokUrl": "https://kc-phq.hrupesh.rn-starter.exp.direct",
-  "packagerNgrokUrl": "https://packager.kc-phq.hrupesh.rn-starter.exp.direct",
-  "ngrokPid": 22932,
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "devToolsPort": 19002
 }

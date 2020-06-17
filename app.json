@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rn-starter",
-    "slug": "rn-starter",
+    "name": "Rate",
+    "slug": "rate",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -15,7 +15,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#212121"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -25,6 +25,8 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": "Created a Custom Rating Component with Stars and also a complete customized ImageCard component.",
+    "githubUrl": "https://github.com/hrupesh/rn-starter"
   }
 }
