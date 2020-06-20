@@ -20,7 +20,7 @@ export default function CounterScreen() {
       <TouchableOpacity onPress={increaseCount}>
         <AntDesign name="pluscircle" size={40} color="white" />
       </TouchableOpacity>
-      <Text> {count} </Text>
+      <Text style={styles.count}> {count} </Text>
       <TouchableOpacity onPress={decreaseCount}>
         <AntDesign name="minuscircle" size={40} color="white" />
       </TouchableOpacity>
@@ -35,4 +35,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "#212121",
   },
+  count:{
+      fontSize:40
+  }
 });
