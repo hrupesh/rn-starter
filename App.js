@@ -4,18 +4,20 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ComponentsScreen from "./src/screens/ComponentsScreens";
 import ListScreen from "./src/screens/ListScreen";
 import ImageScreen from "./src/screens/ImageScreen";
+import CounterScreen from "./src/screens/CounterScreen";
 
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
     Components: ComponentsScreen,
     List: ListScreen,
-    ImageScreen: ImageScreen
+    ImageScreen: ImageScreen,
+    CounterScreen: CounterScreen
   },
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "Welcome",
+      title: "Rupesh Chaudhari",
     },
   }
 );
