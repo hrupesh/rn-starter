@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Alert } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -13,6 +13,8 @@ export default function CounterScreen() {
   const decreaseCount = () => {
     if (count > 0) {
       setCount(count - 1);
+    }else{
+        Alert('Enough 🛑','Counter has reached minimum limit of 0 ');
     }
   };
 
