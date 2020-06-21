@@ -7,14 +7,18 @@ export default function CounterScreen() {
   const [count, setCount] = useState(0);
 
   const increaseCount = () => {
-    setCount(count + 1);
+    if (count > 9) {
+      Alert.alert("Enough 🛑", "Counter has reached maximum limit.");
+    } else {
+      setCount(count + 1);
+    }
   };
 
   const decreaseCount = () => {
     if (count > 0) {
       setCount(count - 1);
-    }else{
-        Alert('Enough 🛑','Counter has reached minimum limit of 0 ');
+    } else {
+      Alert.alert("Enough 🛑", "Counter has reached minimum limit.");
     }
   };
 
