@@ -25,6 +25,10 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate("CounterScreen");
   };
 
+  const goToColorsScreen = () => {
+    navigation.navigate("Color");
+  };
+
   return (
     <View style={styles.view}>
       <TouchableOpacity style={styles.icons} onPress={goToComponets}>
@@ -42,6 +46,9 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToCounterScreen}>
         <MaterialCommunityIcons name="counter" size={40} color="white" />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.icons} onPress={goToColorsScreen}>
+        <Ionicons name="ios-color-palette" size={40} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -64,7 +71,7 @@ const styles = StyleSheet.create({
   },
   icons: {
     // margin: 10,
-    padding: 35,
+    padding: 25,
     height: 100,
     justifyContent: "center",
   },
