@@ -28,10 +28,10 @@ export default function ColorScreen() {
       />
       <FlatList 
         data={colors}
-        keyExtractor={(color) => color}
-        renderItem={({color}) => {
+        keyExtractor={(item) => item}
+        renderItem={({item}) => {
            return (<View
-          style={{ height: 100, width: 100, backgroundColor: color }}
+          style={{ height: 25, width: '100%', backgroundColor: item }}
         ></View>);
         }}
       >
