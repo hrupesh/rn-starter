@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Button } from "react-native";
 import {
   TouchableNativeFeedback,
   ScrollView,
+  FlatList,
 } from "react-native-gesture-handler";
 
 export default function ColorScreen() {
@@ -25,11 +26,17 @@ export default function ColorScreen() {
         //   alert(colors);
         }}
       />
-      <ScrollView style={styles.container}>
-        <View
-          style={{ height: 100, width: 100, backgroundColor: randomRGB() }}
-        ></View>
-      </ScrollView>
+      <FlatList 
+        data={colors}
+        keyExtractor={(color) => color}
+        renderItem={({color}) => {
+           return (<View
+          style={{ height: 100, width: 100, backgroundColor: color }}
+        ></View>);
+        }}
+      >
+        
+      </FlatList>
     </View>
   );
 }
