@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, Button } from "react-native";
 import {
   TouchableNativeFeedback,
@@ -6,6 +6,8 @@ import {
 } from "react-native-gesture-handler";
 
 export default function ColorScreen() {
+  const [colors, SetColors] = useState([]);
+
   const randomRGB = () => {
     const red = Math.floor(Math.random() * 255);
     const blue = Math.floor(Math.random() * 255);
@@ -16,7 +18,13 @@ export default function ColorScreen() {
 
   return (
     <View>
-      <Button title="Add Color" />
+      <Button
+        title="Add Color"
+        onPress={() => {
+          SetColors([...colors, randomRGB()]);
+        //   alert(colors);
+        }}
+      />
       <ScrollView style={styles.container}>
         <View
           style={{ height: 100, width: 100, backgroundColor: randomRGB() }}
