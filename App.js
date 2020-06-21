@@ -17,7 +17,7 @@ const navigator = createStackNavigator(
   {
     initialRouteName: "Home",
     defaultNavigationOptions: {
-      title: "Rupesh Chaudhari",
+      title: "RN App",
     },
   }
 );

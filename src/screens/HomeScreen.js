@@ -1,7 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from "react-native";
+import {
+  AntDesign,
+  MaterialIcons,
+  FontAwesome5,
+  Ionicons,
+  MaterialCommunityIcons,
+} from "@expo/vector-icons";
 
-const HomeScreen = ({navigation}) => {
+const HomeScreen = ({ navigation }) => {
   const goToComponets = () => {
     navigation.navigate("Components");
   };
@@ -20,17 +27,21 @@ const HomeScreen = ({navigation}) => {
 
   return (
     <View style={styles.view}>
-      <TouchableOpacity onPress={goToComponets} style={styles.btn}>
-        <Text style={styles.btntext}>Component Screen</Text>
+      <TouchableOpacity style={styles.icons} onPress={goToComponets}>
+        <MaterialIcons
+          name="settings-input-component"
+          size={40}
+          color="white"
+        />
       </TouchableOpacity>
-      <TouchableOpacity onPress={goToList} style={styles.btn2}>
-        <Text style={styles.btntext}>List Screen</Text>
+      <TouchableOpacity style={styles.icons} onPress={goToList}>
+        <FontAwesome5 name="clipboard-list" size={40} color="white" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={goToImageScreen} style={styles.btn3}>
-        <Text style={styles.btntext}>Image Screen</Text>
+      <TouchableOpacity style={styles.icons} onPress={goToImageScreen}>
+        <Ionicons name="ios-images" size={40} color="white" />
       </TouchableOpacity>
-      <TouchableOpacity onPress={goToCounterScreen} style={styles.btn3}>
-        <Text style={styles.btntext}>Counter Screen</Text>
+      <TouchableOpacity style={styles.icons} onPress={goToCounterScreen}>
+        <MaterialCommunityIcons name="counter" size={40} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -43,9 +54,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
   view: {
-    flex: 1,
-    flexDirection: "column",
-    alignItems: "center",
+    width: "100%",
+    height: 100,
+    position: "absolute",
+    bottom: 0,
+    backgroundColor: "#212121",
+    justifyContent: "center",
+    flexDirection: "row",
+  },
+  icons: {
+    // margin: 10,
+    padding: 35,
+    height: 100,
     justifyContent: "center",
   },
   btn: {
@@ -75,6 +95,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#2962ff",
+    textAlign: "center",
+    margin: 15,
+  },
+  btn4: {
+    width: "90%",
+    height: "10%",
+    borderRadius: 15,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#1565c0",
     textAlign: "center",
     margin: 15,
   },
