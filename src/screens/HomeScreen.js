@@ -39,24 +39,24 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.icons} onPress={goToComponets}>
         <MaterialIcons
           name="settings-input-component"
-          size={40}
+          size={30}
           color="white"
         />
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToList}>
-        <FontAwesome5 name="clipboard-list" size={40} color="white" />
+        <FontAwesome5 name="clipboard-list" size={30} color="white" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToImageScreen}>
-        <Ionicons name="ios-images" size={40} color="white" />
+        <Ionicons name="ios-images" size={30} color="white" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToCounterScreen}>
-        <MaterialCommunityIcons name="counter" size={40} color="white" />
+        <MaterialCommunityIcons name="counter" size={30} color="white" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToColorsScreen}>
-        <Ionicons name="ios-color-palette" size={40} color="white" />
+        <Ionicons name="ios-color-palette" size={30} color="white" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToSquareScreen}>
-        <Feather name="airplay" size={24} color="black" />
+        <Feather name="airplay" size={30} color="white" />
       </TouchableOpacity>
     </View>
   );
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   icons: {
     // margin: 10,
-    padding: 25,
+    padding: 20,
     height: 100,
     justifyContent: "center",
   },
