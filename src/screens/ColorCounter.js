@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button } from 'react-native'
 
-export default function ColorCounter() {
+export default function ColorCounter({color}) {
     return (
         <View>
-            <Text>Red</Text>
-            <Button title="Add Redness" />
-            <Button title="Reduce Redness" />
+            <Text> {color} </Text>
+            <Button title="Add {color}" />
+            <Button title="Reduce {color}" />
         </View>
     )
 }
