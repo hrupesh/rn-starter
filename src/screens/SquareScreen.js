@@ -10,32 +10,29 @@ export default function SquareScreen() {
   const [blue, setblue] = useState(0);
 
   const validateColors = () => {
-      if(red > 255){
-          setRed(255)
-      }else if(red < 0){
-          setRed(0)
-      }
+    if (red > 255) {
+      setRed(255);
+    } else if (red < 0) {
+      setRed(0);
+    }
 
-      if(green > 255){
-          setgreen(255)
-      }else if(green < 0){
-          setgreen(0)
-      }
+    if (green > 255) {
+      setgreen(255);
+    } else if (green < 0) {
+      setgreen(0);
+    }
 
-      if(blue > 255){
-          setblue(255)
-      }else if(blue < 0){
-          setblue(0)
-      }
-      
-  }
+    if (blue > 255) {
+      setblue(255);
+    } else if (blue < 0) {
+      setblue(0);
+    }
+  };
 
-  validateColors()
+  validateColors();
 
   return (
-    <View>
-      <Text>Square Screen</Text>
-
+    <View style={styles.container}>
       <ColorCounter
         onAdd={() => setRed(red + THRESHOLD)}
         onReduce={() => setRed(red - THRESHOLD)}
@@ -52,9 +49,8 @@ export default function SquareScreen() {
         color="Blue"
       />
 
-      <Text>
-        {" "}
-        Current Value : RGB({red}, {green}, {blue}){" "}
+      <Text style={styles.curVal}>
+        Current Value : RGB({red}, {green}, {blue})
       </Text>
       <View
         style={{
@@ -67,4 +63,15 @@ export default function SquareScreen() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    textAlign: "center",
+  },
+  curVal:{
+      fontSize: 18,
+      letterSpacing:1,
+      textAlign:'center',
+      backgroundColor:'#212121',
+      color:'white'
+  }
+});
