@@ -5,8 +5,8 @@ export default function ColorCounter({ color }) {
   return (
     <View>
       <Text> {color} </Text>
-      <Button title="Add">{color}</Button>
-      <Button title="Reduce">{color}</Button>
+      <Button title={`Add ${color}`} />
+      <Button title={`Reduce ${color}`} />
     </View>
   );
 }
