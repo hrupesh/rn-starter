@@ -2,28 +2,41 @@ import React, { useState } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import ColorCounter from "./ColorCounter";
 
+const THRESHOLD = 5;
+
 export default function SquareScreen() {
   const [red, setRed] = useState(0);
   const [green, setgreen] = useState(0);
   const [blue, setblue] = useState(0);
+
+  const validateColors = () => {
+      if(red > 255){
+          setRed(255)
+      }else if(red < 0){
+          setRed(0)
+      }
+      
+  }
+
+  validateColors()
 
   return (
     <View>
       <Text>Square Screen</Text>
 
       <ColorCounter
-        onAdd={() => setRed(red + 1)}
-        onReduce={() => setRed(red - 1)}
+        onAdd={() => setRed(red + THRESHOLD)}
+        onReduce={() => setRed(red - THRESHOLD)}
         color="Red"
       />
       <ColorCounter
-        onAdd={() => setgreen(green + 1)}
-        onReduce={() => setgreen(green - 1)}
+        onAdd={() => setgreen(green + THRESHOLD)}
+        onReduce={() => setgreen(green - THRESHOLD)}
         color="Green"
       />
       <ColorCounter
-        onAdd={() => setblue(blue + 1)}
-        onReduce={() => setblue(blue - 1)}
+        onAdd={() => setblue(blue + THRESHOLD)}
+        onReduce={() => setblue(blue - THRESHOLD)}
         color="Blue"
       />
 
