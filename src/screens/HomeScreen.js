@@ -6,6 +6,7 @@ import {
   FontAwesome5,
   Ionicons,
   MaterialCommunityIcons,
+  Feather
 } from "@expo/vector-icons";
 
 const HomeScreen = ({ navigation }) => {
@@ -29,6 +30,10 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate("Color");
   };
 
+  const goToSquareScreen = () => {
+    navigation.navigate("Square");
+  };
+
   return (
     <View style={styles.view}>
       <TouchableOpacity style={styles.icons} onPress={goToComponets}>
@@ -49,6 +54,9 @@ const HomeScreen = ({ navigation }) => {
       </TouchableOpacity>
       <TouchableOpacity style={styles.icons} onPress={goToColorsScreen}>
         <Ionicons name="ios-color-palette" size={40} color="white" />
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.icons} onPress={goToSquareScreen}>
+        <Feather name="airplay" size={24} color="black" />
       </TouchableOpacity>
     </View>
   );
