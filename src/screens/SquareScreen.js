@@ -21,6 +21,12 @@ export default function SquareScreen() {
       }else if(green < 0){
           setgreen(0)
       }
+
+      if(blue > 255){
+          setblue(255)
+      }else if(blue < 0){
+          setblue(0)
+      }
       
   }
 
