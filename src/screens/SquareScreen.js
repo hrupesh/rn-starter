@@ -7,7 +7,9 @@ export default function SquareScreen() {
         <View>
             <Text>Square Screen</Text>
 
-            <ColorCounter />
+            <ColorCounter color="red" />
+            <ColorCounter color="red" />
+            <ColorCounter color="red" />
         </View>
     )
 }
