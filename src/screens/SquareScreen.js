@@ -12,18 +12,18 @@ export default function SquareScreen() {
       <Text>Square Screen</Text>
 
       <ColorCounter
-        onAdd={() => setRed(red + 100)}
-        onReduce={() => setRed(red - 100)}
+        onAdd={() => setRed(red + 1)}
+        onReduce={() => setRed(red - 1)}
         color="Red"
       />
       <ColorCounter
-        onAdd={() => setgreen(green + 100)}
-        onReduce={() => setgreen(green - 100)}
+        onAdd={() => setgreen(green + 1)}
+        onReduce={() => setgreen(green - 1)}
         color="Green"
       />
       <ColorCounter
-        onAdd={() => setblue(blue + 100)}
-        onReduce={() => setblue(blue - 100)}
+        onAdd={() => setblue(blue + 1)}
+        onReduce={() => setblue(blue - 1)}
         color="Blue"
       />
 
