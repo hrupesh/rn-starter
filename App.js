@@ -30,6 +30,5 @@ const navigator = createStackNavigator(
 console.log('asdasdasdasd');
 console.log('asdasdasdasd');
 console.log('asdasdasdasd');
-console.log('asdasdasdasd');
 
 export default createAppContainer(navigator);
