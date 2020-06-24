@@ -43,14 +43,14 @@ export default function CounterScreen() {
         activeOpacity={0.8}
         onPress={() => dispatch({ type: "add" })}
       >
-        <AntDesign name="pluscircle" size={100} color="dodgerblue" />
+        <AntDesign name="pluscircle" size={100} color="#666" />
       </TouchableOpacity>
       <Text style={styles.count}> {count} </Text>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => dispatch({ type: "subtract" })}
       >
-        <AntDesign name="minuscircle" size={100} color="dodgerblue" />
+        <AntDesign name="minuscircle" size={100} color="#666" />
       </TouchableOpacity>
     </View>
   );
