@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
   },
   count: {
     fontSize: 150,
+    color:'#000',
     shadowColor: "#000",
     shadowOffset: {
       width: 50,
@@ -74,11 +75,11 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 10,
     margin: 50,
-    textShadowColor:"#212121",
+    textShadowColor:"#222",
     textShadowOffset:{
       width: 5,
       height: 5,
     },
-    textShadowRadius:3.84,
+    textShadowRadius:10,
   },
 });
