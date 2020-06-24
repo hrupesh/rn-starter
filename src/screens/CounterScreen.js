@@ -10,9 +10,7 @@ const reducer = (state, action) => {
         ? state
         : { ...state, count: state.count + 1 };
     case "subtract":
-      return state.count - 1 < 0
-        ? state
-        : { ...state, count: state.count - 1 };
+      return state.count - 1 < 0 ? state : { ...state, count: state.count - 1 };
     default:
       return state;
   }
@@ -41,11 +39,17 @@ export default function CounterScreen() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => dispatch({ type: "add" })}>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => dispatch({ type: "add" })}
+      >
         <AntDesign name="pluscircle" size={100} color="black" />
       </TouchableOpacity>
       <Text style={styles.count}> {count} </Text>
-      <TouchableOpacity onPress={() => dispatch({ type: "subtract" })}>
+      <TouchableOpacity
+        activeOpacity={0.8}
+        onPress={() => dispatch({ type: "subtract" })}
+      >
         <AntDesign name="minuscircle" size={100} color="black" />
       </TouchableOpacity>
     </View>
