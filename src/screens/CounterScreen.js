@@ -10,7 +10,9 @@ const reducer = (state, action) => {
         ? state
         : { ...state, count: state.count + 1 };
     case "subtract":
-      return { ...state, count: state.count - 1 };
+      return state.count - 1 < 0
+        ? state
+        : { ...state, count: state.count - 1 };
     default:
       return state;
   }
