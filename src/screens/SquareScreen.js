@@ -8,12 +8,12 @@ const reducer = (state, action) => {
   switch (action.setColor) {
     case "red":
       return state.red + action.amount > 255 || state.red + action.amount < 0
-        ? state : { ...state, red: state.red + action.amount };
+        ? state
+        : { ...state, red: state.red + action.amount };
     case "green":
-      if (state.green + action.amount > 255 || state.green + action.amount < 0) {
-        return state;
-      }
-      return { ...state, green: state.green + action.amount };
+      return state.green + action.amount > 255 || state.green + action.amount < 0
+        ? state
+        : { ...state, green: state.green + action.amount };
     case "blue":
       if (state.blue + action.amount > 255 || state.blue + action.amount < 0) {
         return state;
