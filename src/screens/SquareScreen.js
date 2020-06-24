@@ -19,6 +19,9 @@ const reducer = (state, action) => {
 export default function SquareScreen() {
   const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 });
 
+  const {red , green , blue} = state;
+
+
   //   const validateColors = () => {
   //     if (red > 255) {
   //       setRed(255);
