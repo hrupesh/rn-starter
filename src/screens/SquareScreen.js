@@ -64,8 +64,8 @@ export default function SquareScreen() {
       </Text>
 
       <ColorCounter
-        onAdd={() => dispatch({ setColor: "red", payload: THRESHOLD })}
-        onReduce={() => dispatch({ setColor: "red", payload: -THRESHOLD })}
+        onAdd={() => dispatch({ type: "red", payload: THRESHOLD })}
+        onReduce={() => dispatch({ type: "red", payload: -THRESHOLD })}
         color="Red"
       />
       <ColorCounter
