@@ -6,11 +6,11 @@ const THRESHOLD = 5;
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "red":
+    case "change_red":
       return state.red + action.amount > 255 || state.red + action.amount < 0
         ? state
         : { ...state, red: state.red + action.amount };
-    case "green":
+    case "change_green":
       return state.green + action.amount > 255 ||
         state.green + action.amount < 0
         ? state
