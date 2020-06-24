@@ -6,7 +6,9 @@ import { AntDesign } from "@expo/vector-icons";
 const reducer = (state, action) => {
   switch (action.type) {
     case "add":
-      return { ...state, count: state.count + 1 };
+      return state.count + 1 > 10
+        ? state
+        : { ...state, count: state.count + 1 };
     case "subtract":
       return { ...state, count: state.count - 1 };
     default:
