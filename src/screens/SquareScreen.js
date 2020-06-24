@@ -5,7 +5,7 @@ import ColorCounter from "./ColorCounter";
 const THRESHOLD = 5;
 
 const reducer = (state, action) => {
-  switch (action.setColor) {
+  switch (action.type) {
     case "red":
       return state.red + action.amount > 255 || state.red + action.amount < 0
         ? state
