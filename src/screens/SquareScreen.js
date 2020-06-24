@@ -7,10 +7,19 @@ const THRESHOLD = 5;
 const reducer = (state, action) => {
   switch (action.setColor) {
     case "red":
+      if (state.red + action.amount > 255 || state.red + action.amount < 0) {
+        return state;
+      }
       return { ...state, red: state.red + action.amount };
     case "green":
+      if (state.green + action.amount > 255 || state.green + action.amount < 0) {
+        return state;
+      }
       return { ...state, green: state.green + action.amount };
     case "blue":
+      if (state.blue + action.amount > 255 || state.blue + action.amount < 0) {
+        return state;
+      }
       return { ...state, blue: state.blue + action.amount };
     default:
       return state;
@@ -19,8 +28,7 @@ const reducer = (state, action) => {
 export default function SquareScreen() {
   const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 });
 
-  const {red , green , blue} = state;
-
+  const { red, green, blue } = state;
 
   //   const validateColors = () => {
   //     if (red > 255) {
@@ -46,6 +54,17 @@ export default function SquareScreen() {
 
   return (
     <View style={styles.container}>
+      <View
+        style={{
+          height: "50%",
+          width: "100%",
+          backgroundColor: `rgb(${red},${green},${blue})`,
+        }}
+      ></View>
+      <Text style={styles.curVal}>
+        RGB({red}, {green}, {blue})
+      </Text>
+
       <ColorCounter
         onAdd={() => dispatch({ setColor: "red", amount: THRESHOLD })}
         onReduce={() => dispatch({ setColor: "red", amount: -THRESHOLD })}
@@ -61,17 +80,6 @@ export default function SquareScreen() {
         onReduce={() => dispatch({ setColor: "blue", amount: -THRESHOLD })}
         color="Blue"
       />
-
-      <Text style={styles.curVal}>
-        Current Value : RGB({red}, {green}, {blue})
-      </Text>
-      <View
-        style={{
-          height: "100%",
-          width: "100%",
-          backgroundColor: `rgb(${red},${green},${blue})`,
-        }}
-      ></View>
     </View>
   );
 }
@@ -81,8 +89,8 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   curVal: {
-    fontSize: 18,
-    letterSpacing: 1,
+    fontSize: 28,
+    letterSpacing: 4,
     textAlign: "center",
     backgroundColor: "#212121",
     color: "white",
