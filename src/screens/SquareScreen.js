@@ -64,18 +64,18 @@ export default function SquareScreen() {
       </Text>
 
       <ColorCounter
-        onAdd={() => dispatch({ type: "red", payload: THRESHOLD })}
-        onReduce={() => dispatch({ type: "red", payload: -THRESHOLD })}
+        onAdd={() => dispatch({ type: "change_red", payload: THRESHOLD })}
+        onReduce={() => dispatch({ type: "change_red", payload: -THRESHOLD })}
         color="Red"
       />
       <ColorCounter
-        onAdd={() => dispatch({ type: "green", payload: THRESHOLD })}
-        onReduce={() => dispatch({ type: "green", payload: -THRESHOLD })}
+        onAdd={() => dispatch({ type: "change_green", payload: THRESHOLD })}
+        onReduce={() => dispatch({ type: "change_green", payload: -THRESHOLD })}
         color="Green"
       />
       <ColorCounter
-        onAdd={() => dispatch({ type: "blue", payload: THRESHOLD })}
-        onReduce={() => dispatch({ type: "blue", payload: -THRESHOLD })}
+        onAdd={() => dispatch({ type: "change_blue", payload: THRESHOLD })}
+        onReduce={() => dispatch({ type: "change_blue", payload: -THRESHOLD })}
         color="Blue"
       />
     </View>
