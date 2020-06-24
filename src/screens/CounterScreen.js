@@ -43,14 +43,14 @@ export default function CounterScreen() {
         activeOpacity={0.8}
         onPress={() => dispatch({ type: "add" })}
       >
-        <AntDesign name="pluscircle" size={100} color="#666" />
+        <AntDesign name="pluscircle" size={100} color="#333" />
       </TouchableOpacity>
       <Text style={styles.count}> {count} </Text>
       <TouchableOpacity
         activeOpacity={0.8}
         onPress={() => dispatch({ type: "subtract" })}
       >
-        <AntDesign name="minuscircle" size={100} color="#666" />
+        <AntDesign name="minuscircle" size={100} color="#333" />
       </TouchableOpacity>
     </View>
   );
@@ -64,15 +64,21 @@ const styles = StyleSheet.create({
     backgroundColor: "#F5F5F5",
   },
   count: {
-    fontSize: 100,
+    fontSize: 150,
     shadowColor: "#000",
     shadowOffset: {
-      width: 5,
-      height: 5,
+      width: 50,
+      height: 50,
     },
     shadowOpacity: 0.5,
     shadowRadius: 3.84,
     elevation: 10,
     margin: 50,
+    textShadowColor:"#212121",
+    textShadowOffset:{
+      width: 5,
+      height: 5,
+    },
+    textShadowRadius:3.84,
   },
 });
