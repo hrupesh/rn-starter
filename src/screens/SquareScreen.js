@@ -7,18 +7,18 @@ const THRESHOLD = 5;
 const reducer = (state, action) => {
   switch (action.type) {
     case "change_red":
-      return state.red + action.amount > 255 || state.red + action.amount < 0
+      return state.red + action.payload > 255 || state.red + action.payload < 0
         ? state
-        : { ...state, red: state.red + action.amount };
+        : { ...state, red: state.red + action.payload };
     case "change_green":
-      return state.green + action.amount > 255 ||
-        state.green + action.amount < 0
+      return state.green + action.payload > 255 ||
+        state.green + action.payload < 0
         ? state
-        : { ...state, green: state.green + action.amount };
+        : { ...state, green: state.green + action.payload };
     case "change_blue":
-      return state.blue + action.amount > 255 || state.blue + action.amount < 0
+      return state.blue + action.payload > 255 || state.blue + action.payload < 0
         ? state
-        : { ...state, blue: state.blue + action.amount };
+        : { ...state, blue: state.blue + action.payload };
     default:
       return state;
   }
