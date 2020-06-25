@@ -15,7 +15,9 @@ export default function NameScreen() {
         autoCapitalize="none"
         autoCorrect={false}
         autoFocus={true}
+        secureTextEntry={true}
       />
+      { text ? <Text>True </Text> : <Text>False</Text> }
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
   );
