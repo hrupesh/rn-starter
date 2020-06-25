@@ -7,7 +7,7 @@ export default function NameScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Enter Text</Text>
-      <TextInput onChangeText={(value) => setText(value)} placeholder="Enter Text" style={styles.input} />
+      <TextInput onChangeText={(val) => setText(val)} placeholder="Enter Text" style={styles.input} />
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
   );
