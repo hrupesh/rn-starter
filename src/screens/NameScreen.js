@@ -20,7 +20,7 @@ export default function NameScreen() {
       {text.length > 6 ? (
         <Text style={styles.success}> Good! 👍🏽 </Text>
       ) : (
-        <Text>Password must be longer than 6 characters </Text>
+        <Text style={styles.error}>Password must be longer than 6 characters </Text>
       )}
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
