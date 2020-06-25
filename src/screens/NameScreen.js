@@ -7,7 +7,12 @@ export default function NameScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Enter Text</Text>
-      <TextInput onChangeText={(val) => setText(val)} placeholder="Enter Text" style={styles.input} />
+      <TextInput
+        onChangeText={(val) => setText(val)}
+        placeholder="Enter Text"
+        style={styles.input}
+        autoCapitalize="none"
+      />
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
   );
@@ -44,9 +49,9 @@ const styles = StyleSheet.create({
     shadowRadius: 50,
     backgroundColor: "#ddd",
   },
-  output:{
-      fontSize:20,
-      padding:25,
-      letterSpacing:1
-  }
+  output: {
+    fontSize: 20,
+    padding: 25,
+    letterSpacing: 1,
+  },
 });
