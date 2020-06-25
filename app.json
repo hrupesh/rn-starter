@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Rate",
-    "slug": "rate",
+    "name": "RN Demo",
+    "slug": "rn-demo",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -24,9 +24,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hrupesh.rnstarter",
+      "buildNumber": "1.0.0"
     },
-    "description": "Created a Custom Rating Component with Stars and also a complete customized ImageCard component.",
-    "githubUrl": "https://github.com/hrupesh/rn-starter"
+    "description": "This is a React Native App developed for testing",
+    "githubUrl": "https://github.com/hrupesh/rn-starter",
+    "android": {
+      "package": "com.hrupesh.rnstarter",
+      "versionCode": 1
+    }
   }
 }
