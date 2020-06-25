@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     fontSize: 100,
     color: "white",
     fontFamily: "monospace",
-    letterSpacing: 3,
+    letterSpacing: 4,
     padding: 15,
     paddingTop: 200,
     textShadowColor: "#000",
