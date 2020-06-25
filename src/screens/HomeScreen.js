@@ -39,37 +39,43 @@ const HomeScreen = ({ navigation }) => {
   };
 
   return (
-    <View style={styles.view}>
-      <TouchableOpacity style={styles.icons} onPress={goToComponets}>
-        <MaterialIcons
-          name="settings-input-component"
-          size={30}
-          color="white"
-        />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToList}>
-        <FontAwesome5 name="clipboard-list" size={30} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToImageScreen}>
-        <Ionicons name="ios-images" size={30} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToCounterScreen}>
-        <MaterialCommunityIcons name="counter" size={30} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToColorsScreen}>
-        <Ionicons name="ios-color-palette" size={30} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToSquareScreen}>
-        <Feather name="airplay" size={30} color="white" />
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.icons} onPress={goToNameScreen}>
-        <MaterialCommunityIcons name="rename-box" size={30} color="white" />
-      </TouchableOpacity>
+    <View style={styles.container}>
+      <View style={styles.view}>
+        <TouchableOpacity style={styles.icons} onPress={goToComponets}>
+          <MaterialIcons
+            name="settings-input-component"
+            size={30}
+            color="white"
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToList}>
+          <FontAwesome5 name="clipboard-list" size={30} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToImageScreen}>
+          <Ionicons name="ios-images" size={30} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToCounterScreen}>
+          <MaterialCommunityIcons name="counter" size={30} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToColorsScreen}>
+          <Ionicons name="ios-color-palette" size={30} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToSquareScreen}>
+          <Feather name="airplay" size={30} color="white" />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.icons} onPress={goToNameScreen}>
+          <MaterialCommunityIcons name="rename-box" size={30} color="white" />
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    backgroundColor:'#7C4DFF'
+  },
   text: {
     fontSize: 30,
     padding: 10,
@@ -80,7 +86,7 @@ const styles = StyleSheet.create({
     height: 75,
     position: "absolute",
     bottom: 0,
-    backgroundColor: "#212121",
+    backgroundColor: "#512DA8",
     justifyContent: "center",
     flexDirection: "row",
   },
