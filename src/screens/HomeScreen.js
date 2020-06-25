@@ -6,7 +6,7 @@ import {
   FontAwesome5,
   Ionicons,
   MaterialCommunityIcons,
-  Feather
+  Feather,
 } from "@expo/vector-icons";
 
 const HomeScreen = ({ navigation }) => {
@@ -34,6 +34,10 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate("Square");
   };
 
+  const goToNameScreen = () => {
+    navigation.navigate("Name");
+  };
+
   return (
     <View style={styles.view}>
       <TouchableOpacity style={styles.icons} onPress={goToComponets}>
@@ -58,6 +62,9 @@ const HomeScreen = ({ navigation }) => {
       <TouchableOpacity style={styles.icons} onPress={goToSquareScreen}>
         <Feather name="airplay" size={30} color="white" />
       </TouchableOpacity>
+      <TouchableOpacity style={styles.icons} onPress={goToNameScreen}>
+        <MaterialCommunityIcons name="rename-box" size={30} color="white" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -70,7 +77,7 @@ const styles = StyleSheet.create({
   },
   view: {
     width: "100%",
-    height: 100,
+    height: 75,
     position: "absolute",
     bottom: 0,
     backgroundColor: "#212121",
@@ -79,8 +86,8 @@ const styles = StyleSheet.create({
   },
   icons: {
     // margin: 10,
-    padding: 20,
-    height: 100,
+    padding: 15,
+    height: 75,
     justifyContent: "center",
   },
   btn: {
