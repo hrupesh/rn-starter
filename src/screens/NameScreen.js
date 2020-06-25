@@ -13,6 +13,7 @@ export default function NameScreen() {
         style={styles.input}
         autoCapitalize="none"
         autoCorrect={false}
+        autoFocus={true}
       />
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
