@@ -6,7 +6,7 @@ export default function NameScreen() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Enter Text</Text>
+      <Text style={styles.label}>Enter Password</Text>
       <TextInput
         value={text}
         onChangeText={(val) => setText(val)}
@@ -22,7 +22,7 @@ export default function NameScreen() {
       ) : (
         <Text style={styles.error}>Password must be longer than 6 characters </Text>
       )}
-      <Text style={styles.output}> You Entered : {text} </Text>
+      <Text style={styles.output}> Your Password : {text} </Text>
     </View>
   );
 }
@@ -30,23 +30,26 @@ export default function NameScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "center",
     fontFamily: "Nunito Sans Regular",
+    backgroundColor:'#512DA8'
   },
   label: {
-    fontSize: 35,
+    fontSize: 32,
     letterSpacing: 2,
+    paddingHorizontal:25,
+    color:'white'
   },
   input: {
-    height: 90,
+    height: 70,
     width: "75%",
     fontSize: 24,
-    margin: 15,
+    margin: 25,
     paddingHorizontal: 25,
     // borderBottomWidth: 1,
     // borderBottomColor: "#aaa",
-    color: "#212121",
+    color: "#512DA8",
     borderRadius: 50,
     shadowColor: "#000",
     shadowOffset: {
@@ -62,5 +65,28 @@ const styles = StyleSheet.create({
     fontSize: 20,
     padding: 25,
     letterSpacing: 1,
+    color:'white'
+  },
+  error:{
+    fontSize:12,
+    letterSpacing:1,
+    padding:10,
+    marginHorizontal:25,
+    color:'#D32F2F',
+    backgroundColor:'#FFCDD2',
+    borderColor:'#F44336',
+    borderWidth:1,
+    borderRadius:5,
+  },
+  success:{
+    fontSize:12,
+    letterSpacing:1,
+    padding:10,
+    marginHorizontal:45,
+    color:'#689F38',
+    backgroundColor:'#DCEDC8',
+    borderColor:'#8BC34A',
+    borderWidth:1,
+    borderRadius:5,
   },
 });
