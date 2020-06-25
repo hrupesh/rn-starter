@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
 
 export default function NameScreen() {
+  const [text, setText] = useState("");
+
   return (
     <View style={styles.container}>
       <Text style={styles.label}>Enter Text</Text>
-      <TextInput placeholder="Enter Text" style={styles.input} />
+      <TextInput onChangeText={(value) => setText(value)} placeholder="Enter Text" style={styles.input} />
+      <Text style={styles.output}> You Entered : {text} </Text>
     </View>
   );
 }
@@ -25,8 +28,8 @@ const styles = StyleSheet.create({
     height: 90,
     width: "75%",
     fontSize: 24,
-    margin:15,
-    paddingHorizontal:25,
+    margin: 15,
+    paddingHorizontal: 25,
     // borderBottomWidth: 1,
     // borderBottomColor: "#aaa",
     color: "#212121",
@@ -36,9 +39,14 @@ const styles = StyleSheet.create({
       width: 5,
       height: 5,
     },
-    elevation:10,
-    shadowOpacity:0.8,
-    shadowRadius:50,
-    backgroundColor:'#ddd'
+    elevation: 10,
+    shadowOpacity: 0.8,
+    shadowRadius: 50,
+    backgroundColor: "#ddd",
   },
+  output:{
+      fontSize:20,
+      padding:25,
+      letterSpacing:1
+  }
 });
