@@ -40,6 +40,14 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      <View>
+        <Text style={styles.h1}>Hey!</Text>
+        <Text style={styles.h2}>Welcome to the Hybrid App</Text>
+        <Text style={styles.h3}>
+          Navigate through different screen using the navingation bar at the
+          bottom 😊{" "}
+        </Text>
+      </View>
       <View style={styles.view}>
         <TouchableOpacity style={styles.icons} onPress={goToComponets}>
           <MaterialIcons
@@ -72,9 +80,9 @@ const HomeScreen = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container:{
-    flex:1,
-    backgroundColor:'#7C4DFF'
+  container: {
+    flex: 1,
+    backgroundColor: "#7C4DFF",
   },
   text: {
     fontSize: 30,
@@ -142,6 +150,51 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: "white",
     letterSpacing: 5,
+  },
+  h1: {
+    fontSize: 100,
+    color: "white",
+    fontFamily: "monospace",
+    letterSpacing: 1,
+    padding: 15,
+    paddingTop: 200,
+    textShadowColor: "#000",
+    textShadowOffset: {
+      height: 5,
+      width: 5,
+    },
+    textShadowRadius: 1,
+    elevation: 10,
+  },
+  h2: {
+    fontSize: 32,
+    color: "white",
+    fontFamily: "monospace",
+    letterSpacing: 2,
+    padding: 20,
+    paddingTop: 10,
+    textShadowColor: "#512DA8",
+    textShadowOffset: {
+      height: 5,
+      width: 5,
+    },
+    textShadowRadius: 1,
+    elevation: 10,
+  },
+  h3: {
+    fontSize: 22,
+    color: "white",
+    fontFamily: "monospace",
+    letterSpacing: 1,
+    padding: 20,
+    paddingTop: 10,
+    textShadowColor: "#512DA8",
+    textShadowOffset: {
+      height: 5,
+      width: 5,
+    },
+    textShadowRadius: 25,
+    elevation: 10,
   },
 });
 
