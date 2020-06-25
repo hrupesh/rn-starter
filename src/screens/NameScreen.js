@@ -17,7 +17,11 @@ export default function NameScreen() {
         autoFocus={true}
         secureTextEntry={true}
       />
-      { text ? <Text>True </Text> : <Text>False</Text> }
+      {text.length > 6 ? (
+        <Text style={styles.success}> Good! 👍🏽 </Text>
+      ) : (
+        <Text>Password must be longer than 6 characters </Text>
+      )}
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
   );
