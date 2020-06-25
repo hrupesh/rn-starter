@@ -12,6 +12,7 @@ export default function NameScreen() {
         placeholder="Enter Text"
         style={styles.input}
         autoCapitalize="none"
+        autoCorrect={false}
       />
       <Text style={styles.output}> You Entered : {text} </Text>
     </View>
