@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
       width: 5,
     },
     textShadowRadius: 1,
-    elevation: 1,
+    elevation: 10,
   },
   h3: {
     fontSize: 22,
