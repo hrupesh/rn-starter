@@ -5,6 +5,9 @@ export default function BoxScreen() {
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Box Screen</Text>
+            <Text style={styles.text}>Box Screen</Text>
+            <Text style={styles.text}>Box Screen</Text>
+            <Text style={styles.text}>Box Screen</Text>
         </View>
     )
 }
