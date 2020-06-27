@@ -4,10 +4,10 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function BoxScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text1}>Box Screen 1</Text>
-            <Text style={styles.text2}>Box Screen 2</Text>
-            <Text style={styles.text3}>Box Screen 3</Text>
-            <Text style={styles.text4}>Box Screen 4</Text>
+            <Text style={styles.text1}> #1</Text>
+            <Text style={styles.text2}> #2</Text>
+            <Text style={styles.text3}> #3</Text>
+            {/* <Text style={styles.text4}>Box Screen 4</Text> */}
         </View>
     )
 }
@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
        alignSelf:'flex-start',
-       paddingHorizontal:40
+       width:120,
+       backgroundColor:'tomato'
+    //    paddingHorizontal:40
     },
     text2:{
         borderColor:'tomato',
@@ -41,7 +43,9 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
         alignSelf:'center',
-        paddingHorizontal:10
+        // paddingHorizontal:10,
+        width:80,
+        backgroundColor:'lightgreen'
     },
     text3:{
         borderColor:'tomato',
@@ -52,7 +56,12 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
         alignSelf:'center',
-        paddingHorizontal:10
+        paddingHorizontal:10,
+        position:'absolute',
+        right:0,
+        height:190,
+        width:120,
+        backgroundColor:'#512DA8',
     },
     text4:{
         borderColor:'tomato',
