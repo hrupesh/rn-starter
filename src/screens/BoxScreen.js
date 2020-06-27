@@ -27,8 +27,10 @@ const styles = StyleSheet.create({
         flex:0.25,
         textAlign:"center",
         textAlignVertical:'center',
-        fontSize:20,
-        letterSpacing:3
+        fontSize:14,
+        letterSpacing:3,
+       alignSelf:'flex-start',
+       paddingHorizontal:9
     },
     text2:{
         borderColor:'tomato',
@@ -36,8 +38,10 @@ const styles = StyleSheet.create({
         flex:0.25,
         textAlign:"center",
         textAlignVertical:'center',
-        fontSize:20,
-        letterSpacing:3
+        fontSize:14,
+        letterSpacing:3,
+        alignSelf:'center',
+        paddingHorizontal:9
     },
     text3:{
         borderColor:'tomato',
@@ -45,8 +49,10 @@ const styles = StyleSheet.create({
         flex:0.25,
         textAlign:"center",
         textAlignVertical:'center',
-        fontSize:20,
-        letterSpacing:3
+        fontSize:14,
+        letterSpacing:3,
+        alignSelf:'center',
+        paddingHorizontal:10
     },
     text4:{
         borderColor:'tomato',
@@ -54,7 +60,9 @@ const styles = StyleSheet.create({
         flex:0.25,
         textAlign:"center",
         textAlignVertical:'center',
-        fontSize:20,
-        letterSpacing:3
+        fontSize:14,
+        letterSpacing:3,
+        alignSelf:'flex-end',
+        paddingHorizontal:8
     },
 })
