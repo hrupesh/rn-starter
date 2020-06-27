@@ -15,7 +15,9 @@ export default function BoxScreen() {
 const styles = StyleSheet.create({
     container:{
         borderWidth:4,
-        borderColor:'yellow'
+        borderColor:'yellow',
+        alignItems:'center'
+
     },
     text:{
         borderColor:'tomato',
