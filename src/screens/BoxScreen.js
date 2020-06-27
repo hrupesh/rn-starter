@@ -7,7 +7,7 @@ export default function BoxScreen() {
             <Text style={styles.text1}> #1</Text>
             <Text style={styles.text2}> #2</Text>
             <Text style={styles.text3}> #3</Text>
-            {/* <Text style={styles.text4}>Box Screen 4</Text> */}
+            <Text style={styles.text4}>Box Screen 4</Text>
         </View>
     )
 }
