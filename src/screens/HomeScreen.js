@@ -51,8 +51,11 @@ const HomeScreen = ({ navigation }) => {
           Navigate through different screen using the navingation bar at the
           bottom 😊{" "}
         </Text>
-        <TouchableOpacity style={styles.icons} onPress={goToBox}>
-          <AntDesign name="CodeSandbox" size={24} color="white" />
+        <TouchableOpacity
+          style={(styles.icons, { marginHorizontal: 50, marginVertical: 10 })}
+          onPress={goToBox}
+        >
+          <AntDesign name="CodeSandbox" size={50} color="#8BC34A" />
         </TouchableOpacity>
       </View>
       <View style={styles.view}>
