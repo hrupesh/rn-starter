@@ -19,34 +19,42 @@ const styles = StyleSheet.create({
         // alignItems:'center',
         // flexDirection:'row',
         justifyContent:'center',
-        height:'100%'
+        height:'100%',
     },
     text1:{
         borderColor:'tomato',
         borderWidth:4,
         flex:0.25,
         textAlign:"center",
-        textAlignVertical:'center'
+        textAlignVertical:'center',
+        fontSize:20,
+        letterSpacing:3
     },
     text2:{
         borderColor:'tomato',
         borderWidth:4,
         flex:0.25,
         textAlign:"center",
-        textAlignVertical:'center'
+        textAlignVertical:'center',
+        fontSize:20,
+        letterSpacing:3
     },
     text3:{
         borderColor:'tomato',
         borderWidth:4,
         flex:0.25,
         textAlign:"center",
-        textAlignVertical:'center'
+        textAlignVertical:'center',
+        fontSize:20,
+        letterSpacing:3
     },
     text4:{
         borderColor:'tomato',
         borderWidth:4,
         flex:0.25,
         textAlign:"center",
-        textAlignVertical:'center'
+        textAlignVertical:'center',
+        fontSize:20,
+        letterSpacing:3
     },
 })
