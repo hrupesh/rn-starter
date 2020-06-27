@@ -17,7 +17,8 @@ const styles = StyleSheet.create({
         borderWidth:4,
         borderColor:'yellow',
         alignItems:'center',
-        flexDirection:'row'
+        flexDirection:'row',
+        justifyContent:'center'
     },
     text:{
         borderColor:'tomato',
