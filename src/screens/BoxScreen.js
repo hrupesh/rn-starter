@@ -4,10 +4,10 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function BoxScreen() {
     return (
         <View style={styles.container}>
-            <Text style={styles.text1}>Box Screen</Text>
-            <Text style={styles.text2}>Box Screen</Text>
-            <Text style={styles.text3}>Box Screen</Text>
-            <Text style={styles.text4}>Box Screen</Text>
+            <Text style={styles.text1}>Box Screen 1</Text>
+            <Text style={styles.text2}>Box Screen 2</Text>
+            <Text style={styles.text3}>Box Screen 3</Text>
+            <Text style={styles.text4}>Box Screen 4</Text>
         </View>
     )
 }
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         borderColor:'yellow',
         // alignItems:'center',
         // flexDirection:'row',
-        justifyContent:'center',
+        // justifyContent:'center',
         height:'100%',
     },
     text1:{
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
        alignSelf:'flex-start',
-       paddingHorizontal:9
+       paddingHorizontal:40
     },
     text2:{
         borderColor:'tomato',
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
         alignSelf:'center',
-        paddingHorizontal:9
+        paddingHorizontal:10
     },
     text3:{
         borderColor:'tomato',
@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
         fontSize:14,
         letterSpacing:3,
         alignSelf:'flex-end',
-        paddingHorizontal:8
+        paddingHorizontal:40,
+        // backgroundColor:'#673AB7',
+        // ...StyleSheet.absoluteFillObject
     },
 })
