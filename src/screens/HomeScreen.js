@@ -51,7 +51,9 @@ const HomeScreen = ({ navigation }) => {
           Navigate through different screen using the navingation bar at the
           bottom 😊{" "}
         </Text>
-        
+        <TouchableOpacity style={styles.icons} onPress={goToBox}>
+          <AntDesign name="CodeSandbox" size={24} color="white" />
+        </TouchableOpacity>
       </View>
       <View style={styles.view}>
         <TouchableOpacity style={styles.icons} onPress={goToComponets}>
@@ -78,9 +80,6 @@ const HomeScreen = ({ navigation }) => {
         </TouchableOpacity>
         <TouchableOpacity style={styles.icons} onPress={goToNameScreen}>
           <MaterialCommunityIcons name="rename-box" size={30} color="white" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.icons} onPress={goToBox}>
-          <AntDesign name="CodeSandbox" size={30} color="white" />
         </TouchableOpacity>
       </View>
     </View>
@@ -165,7 +164,7 @@ const styles = StyleSheet.create({
     fontFamily: "monospace",
     letterSpacing: 5,
     padding: 15,
-    paddingTop: 200,
+    paddingTop: 100,
     textShadowColor: "#000",
     textShadowOffset: {
       height: 5,
