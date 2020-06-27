@@ -24,25 +24,29 @@ const styles = StyleSheet.create({
     text1:{
         borderColor:'tomato',
         borderWidth:4,
-        // flex:0,
-        textAlign:"center"
+        flex:0.25,
+        textAlign:"center",
+        textAlignVertical:'center'
     },
     text2:{
         borderColor:'tomato',
         borderWidth:4,
-        flex:1,
-        textAlign:"center"
+        flex:0.25,
+        textAlign:"center",
+        textAlignVertical:'center'
     },
     text3:{
         borderColor:'tomato',
         borderWidth:4,
-        // flex:0.2,
-        textAlign:"center"
+        flex:0.25,
+        textAlign:"center",
+        textAlignVertical:'center'
     },
     text4:{
         borderColor:'tomato',
         borderWidth:4,
-        // flex:0.2,
-        textAlign:"center"
+        flex:0.25,
+        textAlign:"center",
+        textAlignVertical:'center'
     },
 })
