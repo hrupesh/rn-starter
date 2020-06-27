@@ -38,6 +38,10 @@ const HomeScreen = ({ navigation }) => {
     navigation.navigate("Name");
   };
 
+  const goToBox = () => {
+    navigation.navigate("Box");
+  };
+
   return (
     <View style={styles.container}>
       <View>
@@ -47,6 +51,9 @@ const HomeScreen = ({ navigation }) => {
           Navigate through different screen using the navingation bar at the
           bottom 😊{" "}
         </Text>
+        <TouchableOpacity style={styles.icons} onPress={goToBox}>
+          <AntDesign name="CodeSandbox" size={30} color="black" />
+        </TouchableOpacity>
       </View>
       <View style={styles.view}>
         <TouchableOpacity style={styles.icons} onPress={goToComponets}>
