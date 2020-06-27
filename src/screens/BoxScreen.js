@@ -22,6 +22,8 @@ const styles = StyleSheet.create({
     },
     text:{
         borderColor:'tomato',
-        borderWidth:4
+        borderWidth:4,
+        // flex:0.2,
+        textAlign:"center"
     }
 })
